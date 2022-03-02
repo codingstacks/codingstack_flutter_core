@@ -15,6 +15,7 @@ This flutter core package with some cooked code to kick-start any project from s
         hudle_core:
             git:
                url: git://github.com/codingstacks/codingstack_flutter_core
+               ref: 4a3f06178c95f4d88872e37e0b80e851b332bd84 #(Optional, Use latets commit id for latest update.)
 
 
 
@@ -22,7 +23,7 @@ This flutter core package with some cooked code to kick-start any project from s
 
 ## Usage
 
-###Register Api Service
+### Register Api Service
 Create abstract class and extend with `BaseApiService` and register all your apis
 ```dart
 //Register Apis
@@ -32,7 +33,7 @@ abstract class ApiService extends BaseApiService {
 
 ```
 
-###Implementation of ApiService
+### Implementation of ApiService
 Create abstract class such as ApiProvider and extend with `ApiService` and implement all methods
 call the method using dio and just add `.safeApiCall(this)` in last
 ```dart
@@ -105,7 +106,7 @@ class ModelParser<T> extends Parser<T> {
 }
 ```
 
-###Creating a repository and calling Apis.
+### Creating a repository and calling Apis.
 Call any api using `apiService` and use `toResource` or `toResourcePaginate()` to convert the response into  `Resource<T>` class.
 
 - `toResource` will just convert you `ApiResponse<T>` to  `Resource<T>`.
